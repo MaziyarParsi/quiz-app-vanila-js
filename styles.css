@@ -4,12 +4,14 @@
   box-sizing: border-box;
   font-family: "Poppins";
   font-size: 16px;
+  font-weight: 500;
 }
 
 :root {
-  --color-default: #faedcd;
+  --color-default: #277da1;
   --color-wrong: #e63946;
   --color-correct: #06d6a0;
+  --color-button-defalut: #bde0fe;
 }
 
 body {
@@ -28,4 +30,55 @@ body.correct {
 }
 body.wrong {
   background-color: var(--color-wrong);
+}
+
+.container {
+  width: 900px;
+  max-width: 80%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 0 12px 2px #002f49da;
+}
+.button {
+  --color: var(--color-button-defalut);
+  background-color: var(--color);
+  border: 2px solid var(--color-default);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  border-color: black;
+  transition: ease-in-out 0.3s;
+}
+.button.correct {
+  --color: var(--color-correct);
+  border: none;
+}
+.button.wrong {
+  --color: var(--color-wrong);
+  border: none;
+}
+.answerButtonGrid {
+  grid-template-columns: repeat(2, auto);
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.startButton,
+.nextButton {
+  font-size: 1.4rem;
+  padding: 0.5rem 3rem;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+.hide {
+  display: none;
 }
