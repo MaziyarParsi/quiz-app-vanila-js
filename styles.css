@@ -1,3 +1,31 @@
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  font-family: "Poppins";
+  font-size: 16px;
+}
+
+:root {
+  --color-default: #faedcd;
+  --color-wrong: #e63946;
+  --color-correct: #06d6a0;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --color: var(--color-default);
+  background-color: var(--color-default);
+}
+body.correct {
+  background-color: var(--color-correct);
+}
+body.wrong {
+  background-color: var(--color-wrong);
 }
