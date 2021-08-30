@@ -107,8 +107,8 @@ const QUESTIONS = [
     question: "what color is the sky?",
     answers: [
       { text: "red", correct: false },
-      { text: "blue", correct: false },
-      { text: "white", correct: true },
+      { text: "blue", correct: true },
+      { text: "white", correct: false },
       { text: "black", correct: false },
     ],
   },
