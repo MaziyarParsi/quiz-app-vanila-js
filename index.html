@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
-    <title>Document</title>
+    <title>Quiz time</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="questionContainer" class="hide">
+        <div id="question">Question</div>
+        <div id="answerButtons" class="buttonGrid">
+          <button class="button">Answer1</button>
+          <button class="button">Answer2</button>
+          <button class="button">Answer3</button>
+          <button class="button">Answer4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="startButton" class="startButton hide">Start</button>
+        <button id="nextButton" class="nextButton hide">Next</button>
+      </div>
+    </div>
+  </body>
 </html>
