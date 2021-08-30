@@ -1,5 +1,6 @@
 const START_BUTTON = document.getElementById("startButton")
 const QUSTION_CONTAINER = document.getElementsByClassName("questionContainer")[0]
+const RANDOM_QUESTION,CURRENT_QUESTION_INDEX
 
 START_BUTTON.addEventListener("click", startQuiz)
 
@@ -7,6 +8,8 @@ function startQuiz() {
   console.log("hello")
   START_BUTTON.classList.add("hide")
   QUSTION_CONTAINER.classList.remove("hide")
+  RANDOM_QUESTION= QUESTIONS.sort(()=>Math.random()- 0.5)
+  CURRENT_QUESTION_INDEX=0
   setNextQuestion()
 }
 
