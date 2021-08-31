@@ -52,6 +52,7 @@ function selectAnswer(event) {
   setButtonDisabled()
   let correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
+  setScore(correct)
   Array.from(ANSWER_BUTTONS.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct)
   })
@@ -68,6 +69,11 @@ function setButtonDisabled() {
   Array.from(ANSWER_BUTTONS.children).forEach((button) => {
     button.disabled = true
   })
+}
+function setScore(correct) {
+  if (correct) {
+    SCORE_PARAGRAPH.innerText = `Your score is : ${++score}`
+  }
 }
 
 function setStatusClass(elements, correct) {
