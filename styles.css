@@ -10,7 +10,9 @@
 :root {
   --color-default: #277da1;
   --color-wrong: #e63946;
+  --color-wrong-disabled: #dda1a6;
   --color-correct: #06d6a0;
+  --color-correct-disabled: #8cd4c1;
   --color-button-defalut: #bde0fe;
 }
 
@@ -64,9 +66,17 @@ body.wrong {
   --color: var(--color-correct);
   border: none;
 }
+button.correct:disabled {
+  background-color: var(--color-correct-disabled);
+  cursor: default;
+}
 .button.wrong {
   --color: var(--color-wrong);
   border: none;
+}
+button.wrong:disabled {
+  background-color: var(--color-wrong-disabled);
+  cursor: default;
 }
 .answerButtonGrid {
   grid-template-columns: repeat(2, auto);
