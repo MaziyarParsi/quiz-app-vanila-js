@@ -36,5 +36,4 @@ const QUESTIONS = [
     ],
   },
 ]
-
-export { QUESTIONS }
+export default QUESTIONS

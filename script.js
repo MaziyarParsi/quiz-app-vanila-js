@@ -1,4 +1,4 @@
-import { QUESTIONS } from "./question"
+import QUESTIONS from "./question.js"
 
 const START_BUTTON = document.getElementById("startButton")
 const QUSTION_CONTAINER = document.getElementsByClassName("questionContainer")[0]
