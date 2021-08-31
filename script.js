@@ -6,9 +6,7 @@ const QUESTION_TEXT = document.getElementById("question")
 const ANSWER_BUTTONS = document.getElementById("answerButtons")
 const NEXT_BUTTON = document.getElementById("nextButton")
 const SCORE_PARAGRAPH = document.getElementById("scoreParagraph")
-let randomQuestion,
-  currentQuestionIndex,
-  score = 0
+let randomQuestion, currentQuestionIndex, score
 START_BUTTON.addEventListener("click", startQuiz)
 NEXT_BUTTON.addEventListener("click", () => {
   currentQuestionIndex++
@@ -16,10 +14,12 @@ NEXT_BUTTON.addEventListener("click", () => {
 })
 
 function startQuiz() {
+  score = 0
   START_BUTTON.classList.add("hide")
   QUSTION_CONTAINER.classList.remove("hide")
   randomQuestion = QUESTIONS.sort(() => Math.random() - 0.5)
   currentQuestionIndex = 0
+  SCORE_PARAGRAPH.innerText = `Your score is : ${score}`
   setNextQuestion()
 }
 
