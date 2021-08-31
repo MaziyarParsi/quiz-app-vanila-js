@@ -88,3 +88,11 @@ body.wrong {
 .hide {
   display: none;
 }
+
+p#scoreParagraph {
+  font-size: 2rem;
+}
+.scoreDiv {
+  position: absolute;
+  top: 4rem;
+}
