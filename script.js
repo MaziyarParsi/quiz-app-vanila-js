@@ -3,7 +3,10 @@ const QUSTION_CONTAINER = document.getElementsByClassName("questionContainer")[0
 const QUESTION_TEXT = document.getElementById("question")
 const ANSWER_BUTTONS = document.getElementById("answerButtons")
 const NEXT_BUTTON = document.getElementById("nextButton")
-let randomQuestion, currentQuestionIndex
+const SCORE_PARAGRAPH = document.getElementById("scoreParagraph")
+let randomQuestion,
+  currentQuestionIndex,
+  score = 0
 START_BUTTON.addEventListener("click", startQuiz)
 NEXT_BUTTON.addEventListener("click", () => {
   currentQuestionIndex++
