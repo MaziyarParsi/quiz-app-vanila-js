@@ -4,7 +4,6 @@ const QUESTION_TEXT = document.getElementById("question")
 const ANSWER_BUTTONS = document.getElementById("answerButtons")
 const NEXT_BUTTON = document.getElementById("nextButton")
 let randomQuestion, currentQuestionIndex
-
 START_BUTTON.addEventListener("click", startQuiz)
 NEXT_BUTTON.addEventListener("click", () => {
   currentQuestionIndex++
@@ -47,6 +46,7 @@ function resetState() {
 
 function selectAnswer(event) {
   let selectedButton = event.target
+  setButtonDisabled()
   let correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
   Array.from(ANSWER_BUTTONS.children).forEach((button) => {
@@ -59,6 +59,12 @@ function selectAnswer(event) {
     START_BUTTON.classList.remove("hide")
     NEXT_BUTTON.classList.add("hide")
   }
+}
+
+function setButtonDisabled() {
+  Array.from(ANSWER_BUTTONS.children).forEach((button) => {
+    button.disabled = true
+  })
 }
 
 function setStatusClass(elements, correct) {
