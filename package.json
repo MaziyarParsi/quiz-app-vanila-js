@@ -1,0 +1,19 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "a simple quiz app with vanila js",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaziyarParsi/quiz-app-vanila-js.git"
+  },
+  "author": "maziyar parsi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaziyarParsi/quiz-app-vanila-js/issues"
+  },
+  "homepage": "https://github.com/MaziyarParsi/quiz-app-vanila-js#readme"
+}
